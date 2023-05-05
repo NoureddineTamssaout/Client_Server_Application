@@ -8,6 +8,6 @@ This is an hmi application developed in java, it implements the client server co
 
 2/To run this application, you need to :
 - Install the JDK.
-- Use a software that configures a web server on your computer like ( xampp or wampp) 
+- Use a software that configures a web server on your computer like ( xampp or wamp). 
 - Configure the port.
 - Make sure that the username and the password of the admin of the database are correct.
