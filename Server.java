@@ -9,14 +9,14 @@ public class Server {
     public static void main(String[] args) {
         try {
             // openning the server with the port 12345
-            //
+       
             ServerSocket serverSocket = new ServerSocket(12345);
-            System.out.println("Serveur démarré sur le port 12345");
+            System.out.println("Server started at the port : 12345");
 
             while (true) {
                 // waiting for a connection
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Client connecté : " + clientSocket.getInetAddress().getHostName());
+                System.out.println("Client connected: " + clientSocket.getInetAddress().getHostName());
 
                 // reading the data
                 ObjectInputStream in = new ObjectInputStream(clientSocket.getInputStream());
@@ -44,13 +44,13 @@ public class Server {
 
                     // sending the confirmation of the connection to the client
                     ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
-                    out.writeObject("Connexion réussie");
+                    out.writeObject("Successful connection");
                 } else {
-                    System.out.println("Email ou mot de passe incorrect");
+                    System.out.println("Email or password is  incorrect");
 
                     //error message
                     ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
-                    out.writeObject("Email ou mot de passe incorrect");
+                    out.writeObject("Email or password is  incorrect");
                 }
 
                 // closing the connection
