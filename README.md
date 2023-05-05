@@ -1,6 +1,6 @@
 # Client_Server_Application
 
-This is an hmi application developed in java, it implements the client server concept using sockets.
+This is an hmi application developed in java, it implements the client server concept using sockets.  
 1/What it does:  
 	- Insert clients to the database.  
 	- Allows to a  client to login in or not.   
